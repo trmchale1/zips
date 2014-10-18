@@ -70,16 +70,6 @@ int main()
 	
 	sort(realFiveDigitZips, realFiveDigitZips+fiveDigitZipsCounter);
 
-// so far correctly sorted
-/*
-	for(int b = 0; b < fiveDigitZipsCounter; b++)
-	{
-		cout << realFiveDigitZips[b] << endl;
-
-	}
-*/
-//	cout << fiveDigitZipsCounter << endl;
-
 	string proFinalArray[MAX];
 	int n_unduplicated = 0;
 
@@ -96,17 +86,12 @@ int main()
 		}
 	}
 	
-	for(int k = 0; k < n_unduplicated; k++)
-	{
-		cout << proFinalArray[k] << endl;
-	}
 	
 	int Frequency[MAX];
 	int freq_counter = 0;
 
 	for(int i = 0; i < n_unduplicated; i++)
 		{
-//			cout << finalArray[i] << endl;
 
 			freq_counter = 0;
 
@@ -124,12 +109,6 @@ int main()
 		}
 
 	sortInt(proFinalArray, Frequency, n_unduplicated);
-
-	
-	for(int k = 0; k < n_unduplicated; k++)
-	{
-		cout << "This is the zip code: " << proFinalArray[k] << " and this is its frequency: " << Frequency[k] << endl;
-	}
 
 	string temp3;
 	for(int a = 0; a < n_unduplicated-1; a++)
@@ -149,9 +128,9 @@ int main()
 
 	}
 	
-	for(int k = 0; k < n_unduplicated; k++)
+	for(int k = 0; k < 10; k++)
 	{
-		cout << "This is the zip code: " << proFinalArray[k] << " and this is its frequency: " << Frequency[k] << endl;
+		cout << proFinalArray[k] << " " << Frequency[k] << endl;
 	}
 	return 0;
 	
