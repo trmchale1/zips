@@ -127,10 +127,12 @@ int main()
 		}
 
 	}
-	
-	for(int k = 0; k < 10; k++)
+	int k = 0;
+
+	while(k != 9 && proFinalArray[k] != "0")	
 	{
 		cout << proFinalArray[k] << " " << Frequency[k] << endl;
+		k++;
 	}
 	return 0;
 	
