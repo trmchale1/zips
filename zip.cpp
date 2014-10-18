@@ -2,16 +2,6 @@
 #include <string>
 #include<algorithm>
 using namespace std;
-struct zip_freq{
-	string zip;
-	int freq;
-	
-	zip_freq(){
-		freq = 0;
-	}
-
-};
-
 void sortInt(string realFiveDigitZips[], int code[], int fiveDigitZipsCounter)	
 {
 	string temp;
@@ -30,6 +20,8 @@ void sortInt(string realFiveDigitZips[], int code[], int fiveDigitZipsCounter)
 				realFiveDigitZips[d+1] = temp;
 
 			}
+
+	
 		}
 	}
 
@@ -139,10 +131,28 @@ int main()
 		cout << "This is the zip code: " << proFinalArray[k] << " and this is its frequency: " << Frequency[k] << endl;
 	}
 
+	string temp3;
+	for(int a = 0; a < n_unduplicated-1; a++)
+	{
+		for(int b = 1; b < n_unduplicated-1-a; b++)
+		{
+			if(Frequency[b-1] == Frequency[b])
+			{
+				if(proFinalArray[b-1] > proFinalArray[b])
+				{
+					temp3 = proFinalArray[b];
+					proFinalArray[b-1] = proFinalArray[b];
+					proFinalArray[b] = temp3;					
+				}
+			}
+		}
 
-
-
-
-
+	}
+	
+	for(int k = 0; k < n_unduplicated; k++)
+	{
+		cout << "This is the zip code: " << proFinalArray[k] << " and this is its frequency: " << Frequency[k] << endl;
+	}
 	return 0;
+	
 }	
