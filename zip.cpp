@@ -128,8 +128,9 @@ int main()
 
 	}
 	int k = 0;
+	
+	while(k != 10 && !proFinalArray[k].empty())	
 
-	while(k != 9 && proFinalArray[k] != "0")	
 	{
 		cout << proFinalArray[k] << " " << Frequency[k] << endl;
 		k++;
